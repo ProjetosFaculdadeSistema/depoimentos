@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Depoimentos Acadêmicos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 0 1rem;
+      color: #222;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+    }
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    button {
+      padding: 0.5rem 1.5rem;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Depoimentos Acadêmicos</h1>
+
+  <form action="processar.php" method="POST">
+
+    <label>Nome *</label>
+    <input type="text" name="nome" required />
+
+    <label>E-mail *</label>
+    <input type="email" name="email" required />
+
+    <label>Curso</label>
+    <select name="curso">
+      <option value="">Selecione...</option>
+      <option>Ciência da Computação</option>
+      <option>Sistemas de Informação</option>
+      <option>Engenharia de Software</option>
+      <option>Análise e Desenvolvimento de Sistemas</option>
+      <option>Outro</option>
+    </select>
+
+    <label>Depoimento</label>
+    <textarea name="depoimento" placeholder="Escreva aqui..."></textarea>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</body>
+</html>
